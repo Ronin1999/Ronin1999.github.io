@@ -989,9 +989,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .footer .form {
   display: flex;
-  width: 100%;
-  max-width: 500px;
   background-color: var(--light-color);
+  max-width: 100%;
 }
 .footer .form .email {
   flex: 1;
@@ -1000,7 +999,6 @@ p, h1, h2, h3, h4, h5, h6 {
           appearance: none;
   border: none;
   outline: none;
-  padding: 0 2rem;
 }
 .footer .form .email::-moz-placeholder {
   color: var(--text-color);
@@ -1031,7 +1029,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .footer .form .send-btn {
   background-color: var(--accent-color);
-  padding: 1.5rem;
+  padding: 1.5rem 0.5rem;
   color: var(--light-color);
   display: flex;
   align-items: center;
@@ -1051,10 +1049,21 @@ p, h1, h2, h3, h4, h5, h6 {
   color: var(--accent-color);
 }
 
+@media (min-width: 400px) {
+  .footer form input {
+    padding: 0 1rem;
+  }
+  .footer form .send-btn {
+    padding: 1.5rem !important;
+  }
+}
 @media (min-width: 500px) {
   .tab-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  .footer form input {
+    padding: 0 2rem !important;
   }
 }
 @media (min-width: 600px) {
