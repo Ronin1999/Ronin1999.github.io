@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cris Paul</title>
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Swiper JS Bundle -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <!-- Js -->
+    <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+    <!--! === HEADER === -->
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <a href="index.html" class="navbar-logo">
+                <img src="assets/images/logo.svg" alt="" class="navbar-logo-image">
+            </a>
+            <div class="navbar-menu">
+                <ul class="navbar-list">
+                    <li class="navbar-list-item"><a href="#home" class="navbar-list-link">home</a></li>
+                    <li class="navbar-list-item"><a href="#portfolio" class="navbar-list-link">portfolio</a></li>
+                    <li class="navbar-list-item"><a href="#services" class="navbar-list-link">services</a></li>
+                    <li class="navbar-list-item"><a href="#aboutme" class="navbar-list-link">about me</a></li>
+                    <li class="navbar-list-item"><a href="#blog" class="navbar-list-link">blog</a></li>
+                </ul>
+            </div>
+            <div class="navbar-btn-group">
+                <a href="mailto:mamadjavad78jvd@gmail.com" class="btn btn--text btn--transparent">Contact me</a>
+                <button type="button" class="btn btn--action" id="menu-toggler">
+                    <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.3333 0.999999L0.999918 1" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M17.3333 6.83333L0.999916 6.83333" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M10.3333 12.6667L0.999918 12.6667" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!--! === MAIN === -->
+    <main>
+        <!--! === SHOWCASE === -->
+        <section class="showcase" id="showcase">
+            <div class="showcase-container container">
+                <h1 class="showcase-title title title--main">
+                    Hello I'm Cris Paul, a professional photographer.
+                </h1>
+                <picture class="showcase-image">
+                    <source media="(min-width: 768px)" srcset="assets/images/showcase_image_lg.png">
+                    <img src="assets/images/showcase_image_sm.png" alt="">
+                </picture> 
+            </div>
+        </section>
+        <!--! === PORTFOLIO === -->
+        <section class="portfolio" id="portfolio">
+            <div class="portfolio-container container">
+                <div class="portfolio-metadata section-metadata">
+                    <h2 class="title">my Works</h2>
+                </div>
+                <div class="swiper my-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="assets/images/photo-1.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/images/photo-2.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/images/photo-3.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/images/photo-4.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/images/photo-5.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/images/photo-6.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/images/photo-7.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/images/photo-8.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/images/photo-9.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <!--! === SERVICES === -->
+        <section class="services" id="services">
+            <div class="services-container container">
+                <div class="services-metadata section-metadata">
+                    <h2 class="title">services that i provide</h2>
+                    <p class="section-metadata-description">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia vel eum minus soluta quam aperiam voluptatibus quae, reiciendis ullam obcaecati?
+                    </p>
+                </div>
+                <div class="services-image-wrapper">
+                    <img src="assets/images/cris_paul.png" alt="">
+                </div>
+                <div class="services-list">
+                    <div class="services-list-divider">
+                        <article class="services-list-item">
+                            <i class="ri-camera-line services-list-icon"></i>
+                            <h3 class="services-list-title title">Photography</h3>
+                            <p class="services-list-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis porro maxime excepturi facilis atque doloribus.
+                            </p>
+                        </article>
+                        <article class="services-list-item">
+                            <i class="ri-vidicon-2-line services-list-icon"></i>
+                            <h3 class="services-list-title title">Videography</h3>
+                            <p class="services-list-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis porro maxime excepturi facilis atque doloribus.
+                            </p>
+                        </article>
+                    </div>
+                    <article class="services-list-item">
+                        <i class="ri-flight-takeoff-line services-list-icon"></i>
+                        <h3 class="services-list-title title">Aerial Photography</h3>
+                        <p class="services-list-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis porro maxime excepturi facilis atque doloribus.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!--! === ABOUT === -->
+        <section class="about" id="aboutme">
+            <div class="about-container container">
+                <div class="about-information">
+                    <h2 class="title title--about">about cris paul</h2>
+                    <p class="about-information-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet nesciunt corrupti incidunt aperiam dolorem asperiores.
+                    </p>
+                    <p class="about-information-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet nesciunt corrupti incidunt aperiam dolorem asperiores.
+                    </p>
+                    <a href="#" class="btn btn--text btn--green">learn more</a>
+                </div>
+                <div class="about-images">
+                    <img src="assets/images/about_image_top.png" alt="" class="about-images-image about-images-image--top">
+                    <img src="assets/images/about_image_bottom.png" alt="" class="about-images-image about-images-image--bottom">
+                </div>
+            </div>
+        </section>
+        <!--! === BLOG === -->
+        <section class="blog" id="blog">
+            <div class="blog-container container">
+                <div class="blog-metadata section-metadata">
+                    <h2 class="title">latest blog posts</h2>
+                    <p class="blog-description section-metadata-description">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia vel eum minus soluta quam aperiam voluptatibus quae, reiciendis ullam obcaecati?
+                    </p>
+                    <a href="#" class="btn btn--text btn--transparent">view all posts</a>
+                </div>
+                <article class="blog-post post--left">
+                    <picture class="blog-post-image">
+                        <source media="(min-width: 450px)" srcset="./assets/images/blog_post_1.png">
+                        <img src="assets/images/blog_post_1_small.png" alt="">
+                    </picture>
+                    <h3 class="blog-post--title title">
+                        sample title
+                    </h3>
+                    <a href="#" class="btn btn--text btn--transparent">Read More</a>
+                </article>
+                <article class="blog-post post--right">
+                    <picture class="blog-post-image">
+                        <source media="(min-width: 450px)" srcset="./assets/images/blog_post_2.png">
+                        <img src="assets/images/blog_post_2_small.png" alt="">
+                    </picture>
+                    <h3 class="blog-post--title title">
+                        sample title
+                    </h3>
+                    <a href="#" class="btn btn--text btn--transparent">Read More</a>
+                </article>
+            </div>
+        </section>
+    </main>
+        <!--! === FOOTER === -->
+    <footer class="footer" id="footer">
+        <div class="footer-container container">
+            <div class="footer-group">
+                <h1 class="footer-title title title--main">
+                    Looking for a profesional Photographer?
+                </h1>
+                <a href="mailto:mamadjavad78jvd@gmail.com" class="btn btn--text btn--transparent">Read More</a>
+            </div>
+            <div class="footer-separator"></div>  
+            <div class="footer-group">
+                <a href="index.html" class="footer-logo">
+                    <img src="assets/images/logo.svg" alt="">
+                </a>
+                <p class="footer-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum minima nesciunt animi? Quia, magni odio!</p>
+                <ul class="footer-list">
+                    <li class="footer-list-item"><a href="#" class="footer-link"><i class="ri-twitter-line"></i></a></li>
+                    <li class="footer-list-item"><a href="#" class="footer-link"><i class="ri-dribbble-line"></i></a></li>
+                    <li class="footer-list-item"><a href="#" class="footer-link"><i class="ri-instagram-line"></i></a></li>
+                </ul>
+                <span class="footer-copyright">&copy; Cris Paul 2022. All rights reserved</span>
+            </div>
+        </div>
+    </footer>
+
+
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</body>
+</html>
