@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photosen</title>
+    <meta name="title" content="Photosen">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/JS/app.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="navbar wrapper">
+            <a href="index.html" class="logo">photosen</a>
+            <div class="primary-navigation screen-sm-hidden" aria-label="desktop-navigation">
+                <ul class="nav-links" role="list">
+                    <li><a href="#" class="nav-link current">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link dropdown-btn">
+                            Gallery
+                            <i class="ri-arrow-down-s-line"></i>
+                        </a>
+                        <ul class="dropdown-menu-1" role="list">
+                            <li><a href="#" class="nav-link">nature</a></li>
+                            <li><a href="#" class="nav-link">portrait</a></li>
+                            <li><a href="#" class="nav-link">people</a></li>
+                            <li><a href="#" class="nav-link">architecture</a></li>
+                            <li><a href="#" class="nav-link">animals</a></li>
+                            <li><a href="#" class="nav-link">sports</a></li>
+                            <li><a href="#" class="nav-link">travel</a></li>
+                            <li class="submenu-1">
+                                <a href="#" class="nav-link submenu-btn-1">
+                                    sub menu
+                                    <i class="ri-arrow-right-s-line"></i>
+                                </a>
+                                <ul class="submenu-list-1" role="list">
+                                    <li><a href="#" class="nav-link">menu one</a></li>
+                                    <li><a href="#" class="nav-link">menu two</a></li>
+                                    <li><a href="#" class="nav-link">menu three</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="nav-link">Services</a></li>
+                    <li><a href="#" class="nav-link">About</a></li>
+                    <li><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+                <ul class="social-list" role="list">
+                    <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+                    <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+                    <li><a href="#"><i class="ri-instagram-line"></i></a></li>
+                    <li><a href="#"><i class="ri-youtube-fill"></i></a></li>
+                </ul>
+            </div>
+            <button class="btn open-menu-btn" aria-controls="mobile-navigation" aria-expanded="false">
+                <i class="ri-menu-line"></i>
+            </button>    
+            <div class="mobile-navigation" id="mobile-navigaton" data-state="closed">
+                <button class="btn close-menu-btn">
+                    <i class="ri-close-line"></i>
+                </button>
+                <ul class="nav-links" role="list">
+                    <li><a href="#" class="nav-link current">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link dropdown-btn" onclick="toggleDropDown()">
+                            <span>Gallery</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="list">
+                            <li><a href="#" class="nav-link">nature</a></li>
+                            <li><a href="#" class="nav-link">portrait</a></li>
+                            <li><a href="#" class="nav-link">people</a></li>
+                            <li><a href="#" class="nav-link">architecture</a></li>
+                            <li><a href="#" class="nav-link">animals</a></li>
+                            <li><a href="#" class="nav-link">sports</a></li>
+                            <li><a href="#" class="nav-link">travel</a></li>
+                            <li class="submenu">
+                                <a href="#" class="nav-link submenu-btn" onclick="toggleSubmenu()">
+                                    <span>sub menu</span>       
+                                    <i class="ri-arrow-right-s-line"></i>
+                                </a>
+                                    <ul class="submenu-list" role="list">
+                                        <li><a href="#" class="nav-link">menu one</a></li>
+                                        <li><a href="#" class="nav-link">menu two</a></li>
+                                        <li><a href="#" class="nav-link">menu three</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                    </li>
+                    <li><a href="#" class="nav-link">Services</a></li>
+                    <li><a href="#" class="nav-link">About</a></li>
+                    <li><a href="#" class="nav-link">Contact</a></li>
+                    </ul>
+                        </ul>   
+                        <ul class="social-list" role="list">
+                            <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+                            <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+                            <li><a href="#"><i class="ri-instagram-line"></i></a></li>
+                            <li><a href="#"><i class="ri-youtube-fill"></i></a></li>
+                        </ul>
+            </div>
+            <div class="overlay"></div>
+        </nav>
+    </header>
+    <main>
+        <section class="home gallery" id="home">
+            <div class="wrapper">
+                <div class="gallery-container">
+                    <div class="gallery-image-container">
+                        <img src="assets/images/home/img_1.jpg" alt="">
+                        <div class="image-overlay">
+                            <h6 class="tagline">nature</h6>
+                            <a href="#" class="btn btn--overlay">more photos</a>
+                        </div>
+                    </div>
+                    <div class="gallery-image-container">
+                        <img src="assets/images/home/img_2.jpg" alt="">
+                        <div class="image-overlay">
+                            <h6 class="tagline">portrait</h6>
+                            <a href="#" class="btn btn--overlay">more photos</a>
+                        </div>
+                    </div>
+                    <div class="gallery-image-container">
+                        <img src="assets/images/home/img_3.jpg" alt="">
+                        <div class="image-overlay">
+                            <h6 class="tagline">people</h6>
+                            <a href="#" class="btn btn--overlay">more photos</a>
+                        </div>
+                    </div>
+                    <div class="gallery-image-container">
+                        <img src="assets/images/home/img_4.jpg" alt="">
+                        <div class="image-overlay">
+                            <h6 class="tagline">Architecture</h6>
+                            <a href="#" class="btn btn--overlay">more photos</a>
+                        </div>
+                    </div>
+                    <div class="gallery-image-container">
+                        <img src="assets/images/home/img_5.jpg" alt="">
+                        <div class="image-overlay">
+                            <h6 class="tagline">Animals</h6>
+                            <a href="#" class="btn btn--overlay">more photos</a>
+                        </div>
+                    </div>
+                    <div class="gallery-image-container">
+                        <img src="assets/images/home/img_6.jpg" alt="">
+                        <div class="image-overlay">
+                            <h6 class="tagline">Sports</h6>
+                            <a href="#" class="btn btn--overlay">more photos</a>
+                        </div>
+                    </div>
+                    <div class="gallery-image-container">
+                        <img src="assets/images/home/img_7.jpg" alt="">
+                        <div class="image-overlay">
+                            <h6 class="tagline">Travel</h6>
+                            <a href="#" class="btn btn--overlay">more photos</a>
+                        </div>
+                    </div>
+                    <div class="gallery-image-container">
+                        <img src="assets/images/home/img_3.jpg" alt="">
+                        <div class="image-overlay">
+                            <h6 class="tagline">people</h6>
+                            <a href="#" class="btn btn--overlay">more photos</a>
+                        </div>
+                    </div>
+                    <div class="gallery-image-container">
+                        <img src="assets/images/home/img_4.jpg" alt="">
+                        <div class="image-overlay">
+                            <h6 class="tagline">Architecture</h6>
+                            <a href="#" class="btn btn--overlay">more photos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
