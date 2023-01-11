@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="this is a chess website">
+    <meta name="title" content="CHESS.">
+    <title>CHESS.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/glider.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+    <script src="./JS/app.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body data-theme="dark">
+    <header class="header" id="header">
+        <nav class="navbar wrapper">
+            <a href="index.html" class="logo"></a>
+            <div class="desktop-menu screen-sm-hidden">
+                <ul class="nav-list" role="list">
+                    <li><a href="#" class="nav-link current">home</a></li>
+                    <li><a href="#services" class="nav-link">services</a></li>
+                    <li><a href="#courses" class="nav-link">courses</a></li>
+                    <li><a href="#mentors" class="nav-link">mentors</a></li>
+                    <li><a href="#contact" class="nav-link">contact</a></li>
+                </ul>
+                <div class="icon-menu">
+                    <button class="btn theme-toggle-btn">
+                        <img src="./images/sun.svg" class="light-theme-btn" alt="">
+                        <img src="./images/moon.svg" class="dark-theme-btn" alt="">
+                    </button>
+                    <button class="btn profile-btn">
+                    </button>
+                </div>
+            </div>
+            <button class="btn open-menu-btn" aria-controls="mobile-navigation" aria-expanded="false">
+                <img src="./images/menu.svg" alt="">
+            </button>
+            <div class="mobile-navigation" id="mobile-navigation" data-state="closed">
+                <button class="btn close-menu-btn" aria-controls="mobile-navigation" aria-expanded="false"></button>
+                <div class="icon-menu">
+                    <button class="btn theme-toggle-btn">
+                        <img src="./images/sun.svg" class="light-theme-btn" alt="">
+                        <img src="./images/moon.svg" class="dark-theme-btn" alt="">
+                    </button>
+                    <button class="btn profile-btn">
+
+                    </button>
+                </div>
+                <ul class="nav-list" role="list">
+                    <li><a href="#" class="nav-link current">home</a></li>
+                    <li><a href="#services" class="nav-link">services</a></li>
+                    <li><a href="#courses" class="nav-link">courses</a></li>
+                    <li><a href="#mentors" class="nav-link">mentors</a></li>
+                    <li><a href="#contact" class="nav-link">contact</a></li>
+                </ul>
+                <ul class="social-links" role="list">
+                    <li><a href="#" class="icon-twitter"></a></li>
+                    <li><a href="#" class="icon-instagram"></a></li>
+                    <li><a href="#" class="icon-whatsapp"></a></li>
+                    <li><a href="#" class="icon-tiktok"></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class=" hero">
+            <div class="wrapper">
+                <div class="left-col">
+                    <h1 class="title title--main">we make learning chess look fun</h1>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur. Morbi turpis nunc sit volutpat pellentesque scelerisque praesent phasellus sem. Vivamus proin ipsum porta duis vitae nulla nibh.</p>
+                    <div class="button-group">
+                        <a href="#" class="btn hero-btn btn-outline">get started</a>
+                        <a href="#" class="btn hero-btn btn-fill">view our courses</a>
+                    </div>
+                </div>
+                    <div class="glider-contain">
+                        <div class="glider" id="glider">
+                            <div class="glider-slide"><img src="./images/hero-image-1.jpg" alt=""></div>
+                            <div class="glider-slide"><img src="./images/hero-image-2.jpg" alt=""></div>
+                            <div class="glider-slide"><img src="./images/hero-image-3.jpg" alt=""></div>
+                            <div class="glider-slide"><img src="./images/hero-image-4.jpg" alt=""></div>
+                        </div>
+                        <div role="tablist" class="dots" id="dots"></div>
+                    </div>
+            </div>
+        </section>
+        <section class="services" id="services">
+            <div class="wrapper">
+                <div class="section-metadata">
+                    <h3 class="title section-title">our services</h3>
+                </div>
+                <div class="services-body">
+                    <article>
+                        <h5 class="headline">chess tutoring</h5>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur. Morbi turpis nunc sit volutpat pellentesque scelerisque praesent phasellus sem.</p>  
+                        <a href="#" class="btn cta-btn">
+                            learn more
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+                    <article>
+                        <h5 class="headline">interactive courses</h5>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur. Morbi turpis nunc sit volutpat pellentesque scelerisque praesent phasellus sem.</p>  
+                        <a href="#" class="btn cta-btn">
+                            learn more
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+                    <article>
+                        <h5 class="headline">learning from the best</h5>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur. Morbi turpis nunc sit volutpat pellentesque scelerisque praesent phasellus sem.</p>  
+                        <a href="#" class="btn cta-btn">
+                            learn more
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+                    <article>
+                        <h5 class="headline">chess theory and tactics</h5>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur. Morbi turpis nunc sit volutpat pellentesque scelerisque praesent phasellus sem.</p>  
+                        <a href="#" class="btn cta-btn">
+                            learn more
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+                    <article>
+                        <h5 class="headline">prep for competitions</h5>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur. Morbi turpis nunc sit volutpat pellentesque scelerisque praesent phasellus sem.</p>  
+                        <a href="#" class="btn cta-btn">
+                            learn more
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+                    <article>
+                        <h5 class="headline">best chess books available</h5>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur. Morbi turpis nunc sit volutpat pellentesque scelerisque praesent phasellus sem.</p>  
+                        <a href="#" class="btn cta-btn">
+                            learn more
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="courses" id="courses">
+            <div class="wrapper">
+                <div class="section-metadata">
+                    <h3 class="title section-title">our courses</h3>
+                </div>
+                <div class="courses-body">
+                    <div class="course basic">
+                        <h6 class="title course-title">basic</h6>
+                        <p class="intro-text">our least popular course</p>
+                        <div class="stars">
+                            <img src="./images/star-fill.svg" alt="">
+                            <img src="./images/star-fill.svg" alt="">
+                            <img src="./images/star-fill.svg" alt="">
+                            <img src="./images/star-outline.svg" alt="">
+                            <img src="./images/star-outline.svg" alt="">
+                        </div>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur. Id dui dictumst vitae mattis hac gravida pretium.</p>
+                        <ul class="features" role="list">
+                            <li>
+                                <i class="ri-checkbox-circle-fill"></i>
+                                always on call tutor
+                            </li>
+                            <li>
+                                <i class="ri-checkbox-circle-fill"></i>
+                                competitions
+                            </li>
+                            <li>
+                                <i class="ri-close-line"></i>
+                                tactics and theories
+                            </li>
+                            <li>
+                                <i class="ri-close-line"></i>
+                                chess movies
+                            </li>
+                            <li>
+                                <i class="ri-close-line"></i>
+                                chess books
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-fill course-btn">buy course</a>
+                    </div>
+                    <div class="course standard">
+                        <h6 class="title course-title">standard</h6>
+                        <p class="intro-text">our most popular course</p>
+                        <div class="stars">
+                            <img src="./images/star-fill.svg" alt="">
+                            <img src="./images/star-fill.svg" alt="">
+                            <img src="./images/star-fill.svg" alt="">
+                            <img src="./images/star-fill.svg" alt="">
+                            <img src="./images/star-outline.svg" alt="">
+                        </div>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur. Id dui dictumst vitae mattis hac gravida pretium.</p>
+                        <ul class="features" role="list">
+                            <li>
+                                <i class="ri-checkbox-circle-fill"></i>
+                                always on call tutor
+                            </li>
+                            <li>
+                                <i class="ri-checkbox-circle-fill"></i>
+                                competitions
+                            </li>
+                            <li>
+                                <i class="ri-checkbox-circle-fill"></i>
+                                tactics and theories
+                            </li>
+                            <li>
+                                <i class="ri-close-line"></i>
+                                chess movies
+                            </li>
+                            <li>
+                                <i class="ri-close-line"></i>
+                                chess books
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-fill course-btn">buy course</a>
+                    </div>
+                    <div class="course premium">
+                        <h6 class="title course-title">premium</h6>
+                        <p class="intro-text">our most advanced course</p>
+                        <div class="stars">
+                            <img src="./images/star-fill.svg" alt="">
+                            <img src="./images/star-fill.svg" alt="">
+                            <img src="./images/star-fill.svg" alt="">
+                            <img src="./images/star-fill.svg" alt="">
+                            <img src="./images/star-fill.svg" alt="">
+                        </div>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur. Id dui dictumst vitae mattis hac gravida pretium.</p>
+                        <ul class="features" role="list">
+                            <li>
+                                <i class="ri-checkbox-circle-fill"></i>
+                                always on call tutor
+                            </li>
+                            <li>
+                                <i class="ri-checkbox-circle-fill"></i>
+                                competitions
+                            </li>
+                            <li>
+                                <i class="ri-checkbox-circle-fill"></i>
+                                tactics and theories
+                            </li>
+                            <li>
+                                <i class="ri-checkbox-circle-fill"></i>
+                                chess movies
+                            </li>
+                            <li>
+                                <i class="ri-checkbox-circle-fill"></i>
+                                chess books
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-fill course-btn">buy course</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mentors" id="mentors">
+            <div class="wrapper">
+                <div class="section-metadata">
+                    <h3 class="title section-title">our mentors</h3>
+                </div>
+                <div class="mentors-body">
+                    <article class="mentor-indv">
+                        <div class="profile">
+                            <img src="./images/magnus.jpg" alt="GM Magnus Carlsen" class="profile-picture">
+                        </div>
+                        <div class="information">
+                            <h5 class="headline">GM magnus carlsen</h5>
+                            <p class="description">Sven Magnus Øen Carlsen is a Norwegian chess grandmaster who is the reigning five-time World Chess Champion, four-time World Rapid Chess Champion, and six-time World Blitz Chess Champion.</p>
+                            <a href="#" class="btn cta-btn">
+                                <span>learn more</span>
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="mentor-indv">
+                        <div class="profile">
+                            <img src="./images/hikaru.jpg" alt="GM hikaru Nakamura" class="profile-picture">
+                        </div>
+                        <div class="information">
+                            <h5 class="headline">Gm hikaru nakamura</h5>
+                            <p class="description">Christopher Hikaru Nakamura is an American chess grandmaster, Twitch streamer, five-time U.S. Chess Champion, and the reigning World Fischer Random Chess Champion.</p>
+                            <a href="#" class="btn cta-btn">
+                                <span>learn more</span>
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="mentor-indv">
+                        <div class="profile">
+                            <img src="./images/levy.jpg" alt="IM levy rozman" class="profile-picture">
+                        </div>
+                        <div class="information">
+                            <h5 class="headline">Im levy rozman</h5>
+                            <p class="description">Levy Rozman, known online as GothamChess, is an American chess International Master and commentator. He produces content on the online platforms Twitch and YouTube.</p>
+                            <a href="#" class="btn cta-btn">
+                                <span>learn more</span>
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="mentor-indv">
+                        <div class="profile">
+                            <img src="./images/eric-rosen.jpg" alt="IM eric rose" class="profile-picture">
+                        </div>
+                        <div class="information">
+                            <h5 class="headline">Im eric rosen</h5>
+                            <p class="description">Hey! I'm International Master Eric Rosen. I regularly stream chess on Twitch and put many of the best moments from my streams onto YouTube. i upload
+                                fairly regularly.</p>
+                            <a href="#" class="btn cta-btn">
+                                <span>learn more</span>
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="clients" id="clients">
+            <div class="wrapper">
+                <div class="section-metadata">
+                    <h3 class="title section-title">our mentors</h3>
+                </div>
+                <div class="clients-body">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="profile">
+                                    <img src="./images/JaneDoe.png" alt="" class="profile-picture">
+                                    <div class="profile-information">
+                                        <span class="name">Jane Doe</span>
+                                        <span class="vocation">ceo of Google</span>
+                                    </div>
+                                </div>
+                                <p class="description">Lorem ipsum dolor sit amet consectetur. Quisque quam sit semper vestibulum sit. Vestibulum augue id integer at metus felis. Morbi lorem eu ut sit nisl vehicula.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="profile">
+                                    <img src="./images/Erensmith.png" alt="" class="profile-picture">
+                                    <div class="profile-information">
+                                        <span class="name">Eren Smith</span>
+                                        <span class="vocation">ceo of microsoft</span>
+                                    </div>
+                                </div>
+                                <p class="description">Lorem ipsum dolor sit amet consectetur. Quisque quam sit semper vestibulum sit. Vestibulum augue id integer at metus felis. Morbi lorem eu ut sit nisl vehicula.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="profile">
+                                    <img src="./images/JohnDoe.png" alt="" class="profile-picture">
+                                    <div class="profile-information">
+                                        <span class="name">John Doe</span>
+                                        <span class="vocation">ceo of amazon</span>
+                                    </div>
+                                </div>
+                                <p class="description">Lorem ipsum dolor sit amet consectetur. Quisque quam sit semper vestibulum sit. Vestibulum augue id integer at metus felis. Morbi lorem eu ut sit nisl vehicula.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-buttons">
+                            <button class="btn swiper-btn prev-btn">
+                                <i class="ri-arrow-left-s-line"></i>
+                            </button>
+                            <button class="btn swiper-btn next-btn">
+                                <i class="ri-arrow-right-s-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <div class="wrapper">
+                <div class="section-metadata">
+                    <h3 class="title section-title">contact us</h3>
+                </div>
+                <div class="contact-body">
+                    <div class="newsletter">
+                        <h5 class="title newsletter-title">newsletter</h5>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">name</label>
+                                <input type="text" id="name" class="input">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">email</label>
+                                <input type="email" name="email" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">message</label>
+                                <input type="text" name="message" id="message">
+                            </div>
+                            <button class="btn form-btn btn-fill" type="submit">submit</button>
+                        </form>
+                    </div>
+                    <div class="our-information">
+                        <h5 class="title information-title">our information</h5>
+                        <div class="information-group">
+                            <span class="tagline">phone numbers</span>
+                            <span class="phone-number">+98145256721</span>
+                            <span class="phone-number">+98145257397</span>
+                        </div>
+                        <div class="information-group">
+                            <span class="tagline">email addresses</span>
+                            <span class="email-address">@emailaddress@gmail.com</span>
+                            <span class="email-address">@gmailaddress@gmail.com</span>
+                        </div>
+                        <ul class="social-links" role="list">
+                            <li><a href="#" class="icon-twitter"></a></li>
+                            <li><a href="#" class="icon-instagram"></a></li>
+                            <li><a href="#" class="icon-whatsapp"></a></li>
+                            <li><a href="#" class="icon-tiktok"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="./JS/glider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</body>
+</html>
