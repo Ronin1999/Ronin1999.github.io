@@ -802,4 +802,57 @@ body[data-theme=light] .newsletter form .form-group input:focus {
   .glider-contain {
     max-width: 500px;
   }
+}
+.loader-wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  background-color: var(--dark-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  display: block;
+  content: "";
+  height: 50px;
+  width: 50px;
+  -webkit-animation: spin 0.5s infinite linear;
+  animation: spin 0.5s infinite linear;
+  border: 10px var(--light-color) double;
+  border-left-style: solid;
+  border-radius: 100%;
+}
+
+.fade {
+  -webkit-animation: fade 1s forwards linear;
+          animation: fade 1s forwards linear;
+}
+
+@-webkit-keyframes fade {
+  to {
+    opacity: 0;
+    visibility: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes fade {
+  to {
+    opacity: 0;
+    visibility: 0;
+    pointer-events: none;
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=main.css.map */

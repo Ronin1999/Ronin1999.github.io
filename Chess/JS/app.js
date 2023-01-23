@@ -101,3 +101,10 @@ const swiper = new Swiper('.swiper', {
     },
     // And if we need scrollbar
   });
+//   Loader
+const loader = document.querySelector('.loader-wrapper');
+
+function loadIn() {
+    loader.classList.add('fade');
+}
+window.addEventListener('load', loadIn);
