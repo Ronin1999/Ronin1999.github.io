@@ -814,34 +814,41 @@ body[data-theme="light"] {
     width: 100vw;
     height: 100vh;
     inset: 0;
-    // z-index: 999;
-    background-color: var(--dark-color);
+    background-color: var(--light-color);
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 99;
+    pointer-events: none;
 }
 .loader {
-    display: block;
     content: '';
     height: 50px;
     width: 50px;
-    -webkit-animation: spin .5s infinite linear;
-            animation: spin .5s infinite linear;
-    border: 10px var(--light-color) double;
+    animation: spin .5s infinite linear;
+    display: block;
+    border: 10px var(--dark-color) double;
     border-left-style: solid;
     border-radius: 100%; 
 }
-  .fade {
-    animation: fade 1s forwards linear;
-  }
-  @keyframes fade {
-    to {
-        opacity: 0;
-        visibility: 0;
-        pointer-events: none;
+.fade {
+    animation: fade 1.5s forwards linear;
+}
+
+@keyframes fade {
+    25% {
+        opacity: 1;
     }
-  }
-@keyframes spin {
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+  @keyframes spin {
     to {
       -webkit-transform: rotate(360deg);
               transform: rotate(360deg); 
