@@ -9,7 +9,7 @@ menuToggleBtn.addEventListener('click', ()=> {
     mobileMenu.classList.toggle('active'),
     menuToggleBtn.classList.toggle('active'),
     overlay.classList.toggle('active'),
-    bodyEl.classList.toggle('no-sc')
+    bodyEl.classList.toggle('no-sc');
 });
 
 overlay.addEventListener('click', ()=> {
@@ -97,11 +97,7 @@ const swiper = new Swiper('.swiper', {
   });
 
 
-  const slider = new A11YSlider(document.querySelector(".slider"), {
-    slidesToShow: 1,
-    infinite: true,
-    arrows: false, // arrows enabled 767px and down
-    dots: false,
-    swipe: true,
-    skipBtn: false,
-  });
+  const loader = document.querySelector('.loader-container');
+  window.addEventListener('load', ()=> {
+    loader.classList.add('loaded');
+  })

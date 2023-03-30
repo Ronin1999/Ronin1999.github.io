@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Personal">
     <title>Personal</title>
     <link rel="stylesheet" href="Css/main.css">
     <script src="js/main.js" defer></script>
@@ -12,6 +13,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 </head>
 <body>
+    <div class="loader-container">
+        <span class="loader"></span>
+    </div>
     <header class="header" id="header">
         <div class="wrapper">
             <a href="index.html" class="logo">
@@ -50,11 +54,11 @@
                     <li><a href="#" class="nav-link">contact</a></li>
                 </ul>
             </nav>
-            <button class="btn menu-toggle-btn screen-lg-hidden">
+            <button class="btn menu-toggle-btn screen-lg-hidden" aria-controls="mobile-navigation" aria-expanded="false">
                 <i class="ri-menu-3-line open-menu-btn"></i>
                 <i class="ri-close-line close-menu-btn"></i>
             </button>
-            <div class="mobile-menu screen-lg-hidden">
+            <div class="mobile-menu screen-lg-hidden" id="mobile-navigation">
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link current">Home</a></li>
                     <li><a href="#" class="nav-link">about</a></li>
