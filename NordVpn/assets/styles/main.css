@@ -560,11 +560,12 @@ button {
 
 .mobile-navigation {
   position: fixed;
-  top: 0;
+  top: -1rem;
   right: 0;
   background-color: var(--white);
   z-index: 9999 !important;
   height: 100dvh;
+  height: 100vh;
   width: 32rem;
   padding: 3.2rem;
   translate: 100% 0;
