@@ -1,0 +1,229 @@
+.testimonials {
+    padding-block: 5rem;
+    .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+        .title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .description {
+            font-weight: var(--fw-semibold);
+            font-size: 1.8rem;
+        }
+    }
+}
+.tabs {
+    .tab-links {
+        max-width: 600px;
+        margin-bottom: 4rem;
+        margin-inline: auto;
+        ul {
+            display: flex;
+            justify-content: center;
+            .tab-link {
+                position: relative;
+                color: var(--text-color-dimmer);
+                font-weight: var(--fw-semibold);
+                font-size: 1.2rem;
+                padding: 1.5rem;
+                transition: 300ms ease;
+                cursor: pointer;
+                &:hover {
+                    background-color: rgb(243, 247, 252);
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 2px;
+                    width: 100%;
+                    background-color: var(--accent-color);
+                    transform: scaleX(0);
+                    transition: 300ms ease;
+                }
+            }
+            .tab-link.active {
+                &::before {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+}
+[data-tab-content] {
+    position: absolute;
+    // translate: 100% 50%;
+    scale: 0;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 500ms ease;
+}
+  
+[data-tab-content].active {
+    position: static;
+    scale: 1;
+    // translate: 0%, 0%;
+    pointer-events: all;
+    visibility: visible;
+    opacity: 1;
+}
+.tab-content#youtube {
+    display: grid;
+    gap: 2rem;
+    .youtube-card {
+        padding: 2rem;
+        border: 1px solid rgba(0,0,0,.1);
+        border-radius: 6px;
+        .youtube-card-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            .youtube-avatar {
+                max-width: 6rem;
+                img {
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                }
+            }
+            .youtube-profile {
+                .username {
+                    font-size: 2rem;
+                    font-weight: var(--fw-semibold);
+                }
+                .subscribers {
+                    font-size: 1.4rem;
+                    color: var(--text-color-dimmer);
+                    font-weight: var(--fw-semibold);
+                }
+            }
+        }
+        .divider {
+            display: block;
+            background-color: rgba(0,0,0,.2);
+            height: 1px;
+            margin-block: 2rem;
+        }
+        .description {
+            font-weight: var(--fw-semibold);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+        .youtube-card-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            font-weight: var(--fw-semibold);
+            transition: 300ms ease;
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+}
+.tab-content#tweets {
+    display: grid;
+    gap: 2rem;
+    .tweet-card {
+        padding: 2rem;
+        border: 1px solid rgba(0,0,0,.1);
+        border-radius: 6px;
+        position: relative;
+    }
+    .tweet-card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .twitter-profile {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            .twitter-avatar {
+                img {
+                    width: 3.6rem;
+                }
+            }
+            .name {
+                color: var(--text-color);
+                font-weight: var(--fw-semibold);
+            }
+            .twitter-handle {
+                color: var(--text-color-dimmer);
+                font-size: 1.4rem;
+                font-weight: var(--fw-semibold);
+            }
+        }
+    }
+    .description {
+        color: var(--text-color);
+        line-height: 1.7;
+        margin-block: 3rem;
+        font-weight: var(--fw-semibold);
+        .accent {
+            color: var(--accent-color);
+        }
+    }
+    .twitter-date {
+        color: var(--text-color-dimmer);
+        font-weight: var(--fw-semibold);
+        font-size: 1.4rem;
+        margin-top: 2rem;
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+    }
+}
+.tab-content#tech-reviews {
+    display: grid;
+    gap: 2rem;
+    .review-card {
+        padding: 1rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        .description {
+            font-weight: var(--fw-semibold);
+            line-height: 1.7;
+            max-width: 40ch;
+        }
+        .name {
+            // font-size: 1.8rem;
+            font-weight: var(--fw-bold);
+        }
+        .vocation {
+            font-size: 1.4rem;
+            font-weight: var(--fw-semibold);
+            color: var(--text-color-dimmer);
+        }
+    }
+}
+.tab-content#featured {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    gap: 3rem 1rem;
+}
+.tab-content#awards {
+    display: grid;
+    gap: 3rem;
+    .award {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // gap: 2rem;
+        text-align: center;
+        .name {
+            color: rgb(77, 78, 86);
+            font-weight: var(--fw-bold);
+        }
+        .description {
+            color: var(--text-color-dimmer);
+        }
+    }
+}

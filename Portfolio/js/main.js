@@ -6,18 +6,18 @@ const header = document.querySelector('#header');
 const counters = document.querySelectorAll('.counter');
 
 menuToggleBtn.addEventListener('click', ()=> {
-    mobileMenu.classList.toggle('active'),
-    menuToggleBtn.classList.toggle('active'),
-    overlay.classList.toggle('active'),
+    mobileMenu.classList.toggle('active');
+    menuToggleBtn.classList.toggle('active');
+    overlay.classList.toggle('active');
     bodyEl.classList.toggle('no-sc');
 });
 
 overlay.addEventListener('click', ()=> {
     if(mobileMenu.classList.contains('active')){
-        mobileMenu.classList.remove('active'),
-        menuToggleBtn.classList.remove('active'),
-        overlay.classList.remove('active'),
-        bodyEl.classList.remove('no-sc')
+        mobileMenu.classList.remove('active');
+        menuToggleBtn.classList.remove('active');
+        overlay.classList.remove('active');
+        bodyEl.classList.remove('no-sc');
     }
 });
 window.addEventListener('scroll', ()=> {
@@ -25,7 +25,7 @@ window.addEventListener('scroll', ()=> {
         header.classList.add('active');
     }
     else {
-        header.classList.remove('active')
+        header.classList.remove('active');
     }
 })
 function countUp() {
@@ -34,7 +34,6 @@ function countUp() {
 
     const updateCounter = () => {
         const target = +counter.getAttribute('data-target');   
-        // console.log(target);
         const c = +counter.innerText;
         const increment = target / 100;
         
@@ -51,6 +50,7 @@ function countUp() {
 }
 countUp();
 
+// Tabs
 const tabs = document.querySelectorAll('[data-tab-target]');
 const tabContents = document.querySelectorAll('[data-tab-content]');
 

@@ -1,0 +1,36 @@
+.deal {
+    padding-block: 5rem;
+    .wrapper {
+        max-width: 1000px;
+        padding: 4rem 2rem;
+        text-align: center;
+        background-image: url('https://s1.nordcdn.com/nordvpn/media/1.1900.0/images/campaigns/sales-campaign/sales-campaign.svg');
+        background-color: rgb(243, 247, 252);
+        background-position: 50% 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 6px;
+        .intro-text {
+            color: var(--text-color);
+            font-size: 1.4rem;
+            font-weight: var(--fw-semibold);
+        }
+        .title {
+            font-size: 3rem;
+            margin-block: 1rem;
+            line-height: 1.2;
+        }
+        .btn {
+            padding: 1rem 3rem;
+            margin-bottom: 2rem;
+        }
+        .guarantee {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+            font-size: 1.2rem;
+            font-weight: var(--fw-semibold);
+        }
+    }
+}

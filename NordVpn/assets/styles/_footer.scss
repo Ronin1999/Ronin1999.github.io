@@ -1,0 +1,104 @@
+.footer {
+    padding-block: 5rem;
+    background-color: var(--dark-blue);
+    .wrapper {
+        display: grid;
+        gap: 4rem;
+    }
+    .footer-top-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        .text {
+            color: rgb(177, 177, 180);
+            font-weight: var(--fw-semibold);
+            font-size: 1.4rem;
+        }
+        .stores {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+    .footer-links-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        .footer-link-group {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            .tagline {
+                font-size: 1.2rem;
+                font-weight: var(--fw-semibold);
+                text-transform: uppercase;
+                color: rgb(177, 177, 180);
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .footer-link {
+                color: var(--white);
+                font-size: 1.4rem;
+                transition: opacity 200ms;
+                &:hover {
+                    opacity: .6;
+                }
+            }
+            .with-icon {
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+            }
+        }
+    }
+    .footer-bottom-row {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        .copyright {
+            font-size: 1.2rem;
+            color: rgb(177, 177, 180);
+            a {
+                display: inline-block;
+                color: rgb(177, 177, 180);
+                opacity: .7;
+                text-decoration: underline;
+            }
+        }
+        .footer-bottom-row-group {
+            display: grid;
+            justify-items: start;
+            gap: 2rem;
+            .credit-cards {
+                grid-row: 2;
+            }
+            .languages {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                select {
+                    font-weight: var(--fw-semibold);
+                    background: none;
+                    border: 0;
+                    outline: 0;
+                    color: var(--white);
+                    font-size: 1.2rem;
+                    appearance: none;
+                    cursor: pointer;
+                    position: relative;
+                    padding: .5rem;
+
+                    option {
+                        color: var(--text-color);
+                        font-size: 1.2rem;
+                        font-weight: var(--fw-semibold);
+                    }
+                }
+            }
+        }
+    }
+}

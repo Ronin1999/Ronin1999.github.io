@@ -1,0 +1,75 @@
+.hero  {
+    padding: 4rem 2rem;
+    background-color: rgb(243, 247, 252);
+    padding-top: 7rem;
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4rem;
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2rem;
+            .intro-text {
+                font-size: 2rem;
+                font-weight: var(--fw-semibold);
+            }
+            .main-title {
+                font-size: 3.6rem;
+                font-weight: var(--fw-semibold);
+                line-height: 1.2;
+            }
+            .pros {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    font-weight: var(--fw-semibold);
+                }
+            }
+            .button-and-countdown {
+                width: 100%;
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                margin-block: 1rem;
+                .hero-btn {
+                    padding: 1.25rem 4rem;
+                    font-weight: var(--fw-bold);
+                    width: 100%;
+                    text-align: center;
+                }
+                .countdown-container {
+                    width: 100%;
+                    background-color: rgba(42,43,50,.04);
+                    text-align: center;
+                    padding: 1.25rem 1rem;
+                    border-radius: 100vw;
+                    font-weight: var(--fw-semibold);
+                }
+            }
+            .guarantee {
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                font-size: 1.2rem;
+                font-weight: var(--fw-semibold);
+            }
+        }
+    }
+}
+.brands {
+    padding-block: 3rem;
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1rem;
+    }
+}

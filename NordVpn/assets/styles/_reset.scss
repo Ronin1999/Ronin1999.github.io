@@ -1,0 +1,70 @@
+html {
+    font-size: 62.5%;
+    // scroll-behavior: smooth;
+}
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: 'Inter', sans-serif;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    color: var(--text-color);
+}
+::-webkit-scrollbar {
+    width: 1rem;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,.2);
+    height: 5rem;
+    border-radius: 100vw;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+[role="list"] {
+    list-style: none;
+}
+img,
+picture,
+svg,
+video {
+    max-width: 100%;
+    display: block;
+}
+a {
+    text-decoration: none;
+}
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+     scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+}

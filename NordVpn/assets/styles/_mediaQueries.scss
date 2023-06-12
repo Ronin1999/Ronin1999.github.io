@@ -1,0 +1,120 @@
+@media (width >= 550px) {
+    .tab-link {
+        font-size: 1.4rem !important;
+    }
+    .feature-btn {
+        max-width: max-content !important;
+    }
+}
+@media (width >= 768px) {
+    .nav-btn.screen-sm-hidden {
+        display: inline-block !important;
+    }
+    .menu-open-btn {
+        display: none !important;
+    }
+    .mobile-navigation {
+        display: none !important;
+    }
+    .overlay {
+        display: none !important;
+    }
+    .has-dropdown.screen-sm-hidden {
+        display: Flex !important;
+    }
+    .nav-right {
+        gap: 1rem !important;
+    }
+    .hero {
+        .wrapper {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr;
+            align-content: center;
+        }
+    }
+    .brands {
+        .wrapper {
+            grid-template-columns: repeat(6, 1fr);
+        }
+    }
+    .footer {
+        .footer-top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+        }
+        .footer-links-group {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5rem;
+        }
+        .divider {
+            display: block;
+            background-color: rgb(128, 128, 128);
+            opacity: .7;
+            height: 1px;
+        }
+    }
+    .footer-bottom-row {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse !important;
+        justify-content: space-between;
+        .footer-bottom-row-group {
+            display: flex !important;
+            flex-direction: column-reverse;
+            gap: 1rem !important;
+        }
+    }
+    .tab-content#tech-reviews {
+        display: flex;
+        gap: 2rem;
+    }
+    .tab-content#featured {
+        grid-template-columns: repeat(6,1fr);
+    }
+    .tab-content#awards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .deal {
+        .title {
+            font-size: 4rem !important;
+        }
+    }
+    .faq-btn {
+        font-size: 1.8rem !important;
+    }
+}
+@media (width >= 1147px) {
+    .nav-left.screen-sm-hidden {
+        display: flex !important;
+    }
+}
+@media (width >= 992px) {
+    .features {
+        .features-row {
+            display: flex !important;
+            align-items: center;
+            flex-direction: row !important;
+            & > * {
+                flex: 1;
+            }
+            gap: 2rem;
+        }
+    }
+    .tab-content#youtube {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        gap: 1rem; 
+    }
+    .tab-content#tweets {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (width >= 1112px) {
+    .footer-links-group {
+        grid-template-columns: repeat(6, 1fr) !important;
+    }
+}

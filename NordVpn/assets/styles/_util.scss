@@ -1,0 +1,32 @@
+.btn {
+    display: inline-block;
+    border: none;
+    background: none;
+    border-radius: 100vw;
+    color: var(--white);
+    cursor: pointer;
+    transition: opacity 150ms ease;
+}
+.btn:is(:hover,:focus) {
+    opacity: .7;
+}
+.btn--accent {
+    background-color: var(--accent-color);
+}
+.btn--accent-red {
+    background-color: var(--orangered);
+}
+.wrapper {
+    width: min(1200px, 100% - 2rem);
+    margin-inline: auto;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.screen-sm-hidden {
+    display: none;
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
