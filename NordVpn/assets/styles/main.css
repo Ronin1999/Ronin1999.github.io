@@ -1450,7 +1450,7 @@ body.no-scrolling {
   .tab-content#tech-reviews {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 2rem;
   }
   .tab-content#featured {
