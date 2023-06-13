@@ -74,6 +74,7 @@
     display: grid;
     gap: 2rem;
     .youtube-card {
+        position: relative;
         padding: 2rem;
         border: 1px solid rgba(0,0,0,.1);
         border-radius: 6px;
@@ -109,7 +110,7 @@
         .description {
             font-weight: var(--fw-semibold);
             line-height: 1.7;
-            margin-bottom: 2rem;
+            margin-bottom: 4rem;
         }
         .youtube-card-link {
             display: flex;
@@ -119,6 +120,9 @@
             color: var(--text-color);
             font-weight: var(--fw-semibold);
             transition: 300ms ease;
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
             &:hover {
                 opacity: .7;
             }
@@ -163,6 +167,7 @@
         line-height: 1.7;
         margin-block: 3rem;
         font-weight: var(--fw-semibold);
+        font-size: 1.5rem;
         .accent {
             color: var(--accent-color);
         }

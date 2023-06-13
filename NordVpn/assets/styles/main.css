@@ -1021,6 +1021,7 @@ body.no-scrolling {
   gap: 2rem;
 }
 .tab-content#youtube .youtube-card {
+  position: relative;
   padding: 2rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 6px;
@@ -1055,7 +1056,7 @@ body.no-scrolling {
 .tab-content#youtube .youtube-card .description {
   font-weight: var(--fw-semibold);
   line-height: 1.7;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 .tab-content#youtube .youtube-card .youtube-card-link {
   display: flex;
@@ -1065,6 +1066,9 @@ body.no-scrolling {
   color: var(--text-color);
   font-weight: var(--fw-semibold);
   transition: 300ms ease;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
 }
 .tab-content#youtube .youtube-card .youtube-card-link:hover {
   opacity: 0.7;
@@ -1107,6 +1111,7 @@ body.no-scrolling {
   line-height: 1.7;
   margin-block: 3rem;
   font-weight: var(--fw-semibold);
+  font-size: 1.5rem;
 }
 .tab-content#tweets .description .accent {
   color: var(--accent-color);
