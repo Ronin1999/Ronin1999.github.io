@@ -889,6 +889,12 @@ body.no-scrolling {
   align-items: flex-start;
   gap: 3rem;
 }
+.features .features-row .feature-image-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .features .features-row .feature-content {
   display: flex;
   flex-direction: column;
@@ -1317,6 +1323,7 @@ body.no-scrolling {
 }
 .footer .footer-links-group .footer-link-group .footer-link:hover {
   opacity: 0.6;
+  text-decoration: underline;
 }
 .footer .footer-links-group .footer-link-group .with-icon {
   display: flex;
@@ -1399,10 +1406,16 @@ body.no-scrolling {
   .nav-right {
     gap: 1rem !important;
   }
+  .hero {
+    padding-top: 10rem;
+  }
   .hero .wrapper {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr;
-    align-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  .hero .wrapper > * {
+    flex: 1;
   }
   .brands .wrapper {
     grid-template-columns: repeat(6, 1fr);
@@ -1436,6 +1449,8 @@ body.no-scrolling {
   }
   .tab-content#tech-reviews {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
   }
   .tab-content#featured {

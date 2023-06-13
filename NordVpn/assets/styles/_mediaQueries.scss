@@ -26,10 +26,14 @@
         gap: 1rem !important;
     }
     .hero {
+        padding-top: 10rem;
         .wrapper {
-            display: grid !important;
-            grid-template-columns: 1fr 1fr;
-            align-content: center;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            & > * {
+                flex: 1;
+            }
         }
     }
     .brands {
@@ -68,6 +72,8 @@
     }
     .tab-content#tech-reviews {
         display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 2rem;
     }
     .tab-content#featured {

@@ -46,6 +46,7 @@
                 transition: opacity 200ms;
                 &:hover {
                     opacity: .6;
+                    text-decoration: underline;
                 }
             }
             .with-icon {
