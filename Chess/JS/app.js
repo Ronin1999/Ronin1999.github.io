@@ -6,7 +6,47 @@ const themeToggleBtn = document.querySelectorAll('.theme-toggle-btn');
 const bodyEl = document.body;
 const glider = document.querySelector('.glider-contain');
 const navLinks = document.querySelectorAll('.mobile-navigation .nav-link');
+const sliderImage = document.querySelector('.hero-image img');
 
+
+
+const sliderImages = [
+    {
+        id: 1,
+        src: 'images/hero-image-1.jpg'
+    },
+    {
+        id: 2,
+        src: 'images/hero-image-2.jpg'
+    },
+    {
+        id: 3,
+        src: 'images/hero-image-3.jpg'
+    },
+    {
+        id: 4,
+        src: 'images/hero-image-4.jpg',
+    },
+    {
+        id: 5,
+        src: 'images/hero-image-5.jpg',
+    },
+    {
+        id: 6,
+        src: 'images/hero-image-6.jpg',
+    },
+    {
+        id: 7,
+        src: 'images/hero-image-7.jpg',
+    },
+    {
+        id: 8,
+        src: 'images/hero-image-8.jpg',
+    }
+]
+
+
+// Mobile Navigation
 
 let dataState = mobileMenu.getAttribute("data-state");
 openMenuBtn.addEventListener('click',()=> {
@@ -22,13 +62,15 @@ closeMenuBtn.addEventListener('click',()=> {
     openMenuBtn.setAttribute("aria-expanded","false");
     closeMenuBtn.setAttribute("aria-expanded","false");
 });
+
 window.addEventListener('mouseup', (event)=> {
     if(mobileMenu.hasAttribute("data-state","opened") && event.target != mobileMenu && !mobileMenu.contains(event.target)) {
         mobileMenu.setAttribute("data-state","closed");
         openMenuBtn.setAttribute("aria-expanded","false");
         closeMenuBtn.setAttribute("aria-expanded","false");
     }
-})
+});
+
 window.addEventListener('scroll', ()=> {
     if(this.scrollY > 80) {
         headeEl.classList.add('active');
@@ -36,17 +78,6 @@ window.addEventListener('scroll', ()=> {
     else {
         headeEl.classList.remove('active');
     }
-})
-// Slider
-
-new Glider(document.querySelector('.glider'), {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: '#dots',
-    draggable: true,
-    dragVelocity: 2,
-    scrollLock: true,
-    scrollLockDelay: 0,
 });
 
 // Theme toggle
@@ -71,7 +102,6 @@ themeToggleBtn.forEach(Btn => Btn.addEventListener('click', ()=> {
 }));
 
 // Close Navigation on link Clicks
-
 navLinks.forEach(link => link.addEventListener('click', function() {
     setTimeout(function() {
         mobileMenu.setAttribute("data-state","closed");
@@ -84,23 +114,28 @@ navLinks.forEach(link => link.addEventListener('click', function() {
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
+    
     direction: 'horizontal',
     loop: true,
     slidesPerView: 1,
     spaceBetween: 20,
   
     // Navigation arrows
+
     navigation: {
       nextEl: '.next-btn',
       prevEl: '.prev-btn',
     },
+
+    // BreakPoints
+
     breakpoints: {
         750: {
             slidesPerView: 2,
         },
-    },
-    // And if we need scrollbar
+    }
   });
+
 //   Loader
 const loader = document.querySelector('.loader-wrapper');
 
@@ -108,3 +143,50 @@ function loadIn() {
     loader.classList.add('fade');
 }
 window.addEventListener('load', loadIn);
+
+
+// Hero Slider
+
+const pagination = document.querySelector('.pagination');
+
+sliderImages.forEach(img => {
+    const bulletPoint = document.createElement('div');
+    bulletPoint.classList.add('bullet-point');
+    pagination.append(bulletPoint);
+})
+const bulletPoints = document.querySelectorAll('.bullet-point');
+
+let currentSlideIdx = 0;
+function setSliderImages() {
+    sliderImage.setAttribute('src', sliderImages[currentSlideIdx].src);
+    bulletPoints.forEach(bullet => {
+        bullet.classList.remove('active');
+        bulletPoints[currentSlideIdx].classList.add('active');
+    })
+}
+
+// Initial Call
+setSliderImages();
+
+const prevSlideBtn = document.querySelector('.prev-slide');
+const nextSlideBtn = document.querySelector('.next-slide');
+
+prevSlideBtn.addEventListener('click', () => {
+    if(currentSlideIdx === 0){
+        currentSlideIdx = sliderImages.length - 1;
+    }
+    else {
+        currentSlideIdx--;
+    }
+    setSliderImages();
+})
+nextSlideBtn.addEventListener('click', () => {
+    if(currentSlideIdx === sliderImages.length - 1) {
+        currentSlideIdx = 0;
+    }
+    else {
+        currentSlideIdx++;
+    }
+    setSliderImages();
+})
+

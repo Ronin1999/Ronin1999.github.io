@@ -16,6 +16,7 @@
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -152,7 +153,7 @@ button {
 
 body[data-theme=light] {
   --dark-color: #ebebeb;
-  --dark-color-dimmer: #cacaca;
+  --dark-color-dimmer: #fdfdfd;
   --light-color: #1f1f1f;
   --white: #000;
   --black: #fff;
@@ -270,7 +271,7 @@ body[data-theme=light] .newsletter form .form-group input:focus {
   right: 0;
   height: 100vh;
   background-color: var(--dark-color);
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
   width: 60%;
   max-width: 300px;
   padding: 3rem 2rem;
@@ -346,13 +347,14 @@ body[data-theme=light] .newsletter form .form-group input:focus {
 }
 
 .mobile-navigation[data-state=closed] {
-  transform: translateX(100%);
-  visibility: hidden;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0);
 }
 
 .mobile-navigation[data-state=opened] {
-  transform: translateX(0);
-  visibility: visible;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  box-shadow: 0 0px 50rem 0 rgb(0, 0, 0);
 }
 
 .profile-btn {
@@ -404,38 +406,57 @@ body[data-theme=light] .newsletter form .form-group input:focus {
   padding: 0.75rem 2.5rem;
 }
 
-.glider-contain .dots {
+.hero-image-container {
+  max-width: 50rem;
   width: 100%;
-  margin-top: 1rem;
-  justify-content: center !important;
+  position: relative;
+  margin-bottom: 2em;
 }
-.glider-contain .dots .glider-dot {
-  width: 0.75rem;
-  height: 0.75rem;
-  padding: none;
-  margin: none;
+.hero-image-container .hero-image {
+  border: 2px solid var(--white);
 }
-.glider-contain .dots .glider-dot.active {
-  background-color: var(--accent-color);
-}
-
-.glider {
+.hero-image-container .hero-image img {
   width: 100%;
-  max-width: 100%;
-  overflow: hidden !important;
-  z-index: -1;
-  border: 1px solid var(--light-color);
-  border-radius: var(--border-radius);
-}
-
-.glider-slide {
-  height: 40rem !important;
-}
-.glider-slide img {
-  width: 100%;
-  height: 100%;
+  height: 40rem;
+  max-height: 40rem;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.hero-image-container .btn-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.hero-image-container .btn {
+  font-size: 2rem;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  border-radius: 50%;
+  width: 2.2em;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+}
+.hero-image-container .btn:is(:hover, :focus) {
+  opacity: 0.8;
+}
+.hero-image-container .pagination {
+  margin: 1.5em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+}
+.hero-image-container .pagination .bullet-point {
+  width: 0.9rem;
+  aspect-ratio: 1;
+  background-color: #999;
+  border-radius: 50%;
+}
+.hero-image-container .bullet-point.active {
+  background-color: var(--accent-color);
 }
 
 .services-body {
@@ -444,16 +465,26 @@ body[data-theme=light] .newsletter form .form-group input:focus {
   gap: 3rem;
 }
 .services-body article {
-  max-width: 50ch;
+  max-width: 40ch;
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 .services-body .headline {
   font-size: 3rem;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 .services-body .description {
   opacity: 0.8;
+}
+.services-body .cta-btn {
+  text-decoration: underline;
+  font-size: 1.4rem;
+}
+.services-body .cta-btn:hover {
+  opacity: 0.8;
+}
+.services-body .cta-btn:active {
+  color: var(--accent-color);
 }
 
 .courses-body {
@@ -547,6 +578,7 @@ body[data-theme=light] .newsletter form .form-group input:focus {
 }
 .mentor-indv .headline {
   font-size: 2rem;
+  letter-spacing: 1px;
 }
 .mentor-indv .description {
   font-size: 1.5rem;
@@ -560,11 +592,11 @@ body[data-theme=light] .newsletter form .form-group input:focus {
   position: static;
 }
 
-.swiper-wrapper {
+.swiper .swiper-wrapper {
   position: static;
 }
 
-.swiper-slide {
+.swiper .swiper-slide {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -572,27 +604,27 @@ body[data-theme=light] .newsletter form .form-group input:focus {
   padding: 2rem;
   border-radius: var(--border-radius);
 }
-.swiper-slide .profile {
+.swiper .swiper-slide .profile {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
-.swiper-slide .profile .profile-information {
+.swiper .swiper-slide .profile .profile-information {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.swiper-slide .profile .profile-information .name {
+.swiper .swiper-slide .profile .profile-information .name {
   text-transform: capitalize;
   color: var(--white);
   font-weight: 500;
 }
-.swiper-slide .profile .profile-information .vocation {
+.swiper .swiper-slide .profile .profile-information .vocation {
   text-transform: uppercase;
   font-size: 1.2rem;
   color: var(--light-color);
 }
-.swiper-slide .description {
+.swiper .swiper-slide .description {
   color: var(--light-color);
   opacity: 0.8;
   line-height: 1.7;
@@ -799,9 +831,6 @@ body[data-theme=light] .newsletter form .form-group input:focus {
   .hero .wrapper > * {
     flex: 1;
   }
-  .glider-contain {
-    max-width: 500px;
-  }
 }
 .loader-wrapper {
   position: fixed;
@@ -820,8 +849,7 @@ body[data-theme=light] .newsletter form .form-group input:focus {
   content: "";
   height: 50px;
   width: 50px;
-  -webkit-animation: spin 0.5s infinite linear;
-          animation: spin 0.5s infinite linear;
+  animation: spin 0.5s infinite linear;
   display: block;
   border: 10px var(--dark-color) double;
   border-left-style: solid;
@@ -829,21 +857,7 @@ body[data-theme=light] .newsletter form .form-group input:focus {
 }
 
 .fade {
-  -webkit-animation: fade 1.5s forwards linear;
-          animation: fade 1.5s forwards linear;
-}
-
-@-webkit-keyframes fade {
-  25% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
+  animation: fade 1.5s forwards linear;
 }
 
 @keyframes fade {
@@ -856,11 +870,6 @@ body[data-theme=light] .newsletter form .form-group input:focus {
   100% {
     opacity: 0;
     visibility: hidden;
-  }
-}
-@-webkit-keyframes spin {
-  to {
-    transform: rotate(360deg);
   }
 }
 @keyframes spin {
