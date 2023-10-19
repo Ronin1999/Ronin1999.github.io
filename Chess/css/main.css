@@ -16,7 +16,6 @@
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -271,12 +270,12 @@ body[data-theme=light] .newsletter form .form-group input:focus {
   right: 0;
   height: 100vh;
   background-color: var(--dark-color);
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
   width: 60%;
   max-width: 300px;
   padding: 3rem 2rem;
   transition: all 500ms ease;
-  z-index: 9999;
+  z-index: 9999 !important;
 }
 .mobile-navigation .close-menu-btn {
   position: absolute;
@@ -347,14 +346,12 @@ body[data-theme=light] .newsletter form .form-group input:focus {
 }
 
 .mobile-navigation[data-state=closed] {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0);
+  translate: 100% 0;
 }
 
 .mobile-navigation[data-state=opened] {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  box-shadow: 0 0px 50rem 0 rgb(0, 0, 0);
+  box-shadow: 0 0 100em 10em rgba(0, 0, 0, 0.8);
+  translate: 0 0;
 }
 
 .profile-btn {
@@ -371,7 +368,7 @@ body[data-theme=light] .newsletter form .form-group input:focus {
 }
 
 .hero {
-  margin-top: 12rem;
+  margin-top: 14rem;
 }
 .hero .wrapper {
   display: flex;
@@ -407,56 +404,32 @@ body[data-theme=light] .newsletter form .form-group input:focus {
 }
 
 .hero-image-container {
-  max-width: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 45rem;
   width: 100%;
+}
+.hero-image-container .slider {
+  overflow: hidden;
   position: relative;
-  margin-bottom: 2em;
 }
-.hero-image-container .hero-image {
-  border: 2px solid var(--white);
+.hero-image-container .slider .swiper-slide {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
-.hero-image-container .hero-image img {
-  width: 100%;
-  height: 40rem;
-  max-height: 40rem;
+.hero-image-container .slider .swiper-slide img {
   -o-object-fit: cover;
      object-fit: cover;
-}
-.hero-image-container .btn-group {
+  height: 35rem;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
 }
-.hero-image-container .btn {
-  font-size: 2rem;
-  color: var(--dark-color);
-  background-color: var(--light-color);
-  border-radius: 50%;
-  width: 2.2em;
-  aspect-ratio: 1;
-  display: grid;
-  place-content: center;
+.hero-image-container .swiper-pagination {
+  position: static !important;
+  margin-top: 1em;
 }
-.hero-image-container .btn:is(:hover, :focus) {
-  opacity: 0.8;
-}
-.hero-image-container .pagination {
-  margin: 1.5em 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.7rem;
-}
-.hero-image-container .pagination .bullet-point {
-  width: 0.9rem;
-  aspect-ratio: 1;
-  background-color: #999;
-  border-radius: 50%;
-}
-.hero-image-container .bullet-point.active {
-  background-color: var(--accent-color);
+.hero-image-container .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color) !important;
 }
 
 .services-body {
@@ -586,17 +559,15 @@ body[data-theme=light] .newsletter form .form-group input:focus {
   line-height: 1.7;
 }
 
-.swiper {
+.clients-body .swiper {
   width: 100%;
   height: auto;
   position: static;
 }
-
-.swiper .swiper-wrapper {
+.clients-body .swiper .swiper-wrapper {
   position: static;
 }
-
-.swiper .swiper-slide {
+.clients-body .swiper .swiper-slide {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -604,33 +575,32 @@ body[data-theme=light] .newsletter form .form-group input:focus {
   padding: 2rem;
   border-radius: var(--border-radius);
 }
-.swiper .swiper-slide .profile {
+.clients-body .swiper .swiper-slide .profile {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
-.swiper .swiper-slide .profile .profile-information {
+.clients-body .swiper .swiper-slide .profile .profile-information {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.swiper .swiper-slide .profile .profile-information .name {
+.clients-body .swiper .swiper-slide .profile .profile-information .name {
   text-transform: capitalize;
   color: var(--white);
   font-weight: 500;
 }
-.swiper .swiper-slide .profile .profile-information .vocation {
+.clients-body .swiper .swiper-slide .profile .profile-information .vocation {
   text-transform: uppercase;
   font-size: 1.2rem;
   color: var(--light-color);
 }
-.swiper .swiper-slide .description {
+.clients-body .swiper .swiper-slide .description {
   color: var(--light-color);
   opacity: 0.8;
   line-height: 1.7;
 }
-
-.swiper-buttons {
+.clients-body .swiper-buttons {
   width: 100%;
   display: flex;
   align-items: center;
@@ -638,8 +608,7 @@ body[data-theme=light] .newsletter form .form-group input:focus {
   gap: 1rem;
   margin-top: 3rem;
 }
-
-.swiper-btn {
+.clients-body .swiper-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -652,7 +621,7 @@ body[data-theme=light] .newsletter form .form-group input:focus {
   background-color: var(--dark-color-dimmer);
   transition: all 200ms ease;
 }
-.swiper-btn:hover {
+.clients-body .swiper-btn:hover {
   opacity: 0.8;
 }
 

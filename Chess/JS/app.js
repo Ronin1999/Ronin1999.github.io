@@ -134,7 +134,7 @@ const swiper = new Swiper('.swiper', {
             slidesPerView: 2,
         },
     }
-  });
+});
 
 //   Loader
 const loader = document.querySelector('.loader-wrapper');
@@ -147,46 +147,20 @@ window.addEventListener('load', loadIn);
 
 // Hero Slider
 
-const pagination = document.querySelector('.pagination');
+const newswiper = new Swiper('.slider', {
 
-sliderImages.forEach(img => {
-    const bulletPoint = document.createElement('div');
-    bulletPoint.classList.add('bullet-point');
-    pagination.append(bulletPoint);
-})
-const bulletPoints = document.querySelectorAll('.bullet-point');
-
-let currentSlideIdx = 0;
-function setSliderImages() {
-    sliderImage.setAttribute('src', sliderImages[currentSlideIdx].src);
-    bulletPoints.forEach(bullet => {
-        bullet.classList.remove('active');
-        bulletPoints[currentSlideIdx].classList.add('active');
-    })
-}
-
-// Initial Call
-setSliderImages();
-
-const prevSlideBtn = document.querySelector('.prev-slide');
-const nextSlideBtn = document.querySelector('.next-slide');
-
-prevSlideBtn.addEventListener('click', () => {
-    if(currentSlideIdx === 0){
-        currentSlideIdx = sliderImages.length - 1;
-    }
-    else {
-        currentSlideIdx--;
-    }
-    setSliderImages();
-})
-nextSlideBtn.addEventListener('click', () => {
-    if(currentSlideIdx === sliderImages.length - 1) {
-        currentSlideIdx = 0;
-    }
-    else {
-        currentSlideIdx++;
-    }
-    setSliderImages();
-})
-
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+  
+    // Navigation arrows
+    // navigation: {
+    //   nextEl: '.next-btn',
+    //   prevEl: '.prev-btn',
+    // },
+    pagination: {
+        el: '.swiper-pagination',
+    },
+});
