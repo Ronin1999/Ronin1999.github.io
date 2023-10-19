@@ -8,46 +8,7 @@ const glider = document.querySelector('.glider-contain');
 const navLinks = document.querySelectorAll('.mobile-navigation .nav-link');
 const sliderImage = document.querySelector('.hero-image img');
 
-
-
-const sliderImages = [
-    {
-        id: 1,
-        src: 'images/hero-image-1.jpg'
-    },
-    {
-        id: 2,
-        src: 'images/hero-image-2.jpg'
-    },
-    {
-        id: 3,
-        src: 'images/hero-image-3.jpg'
-    },
-    {
-        id: 4,
-        src: 'images/hero-image-4.jpg',
-    },
-    {
-        id: 5,
-        src: 'images/hero-image-5.jpg',
-    },
-    {
-        id: 6,
-        src: 'images/hero-image-6.jpg',
-    },
-    {
-        id: 7,
-        src: 'images/hero-image-7.jpg',
-    },
-    {
-        id: 8,
-        src: 'images/hero-image-8.jpg',
-    }
-]
-
-
 // Mobile Navigation
-
 let dataState = mobileMenu.getAttribute("data-state");
 openMenuBtn.addEventListener('click',()=> {
     if(dataState === "closed") {
