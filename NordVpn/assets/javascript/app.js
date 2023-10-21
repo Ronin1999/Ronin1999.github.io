@@ -5,48 +5,48 @@ const menuCloseBtn = document.querySelector('.menu-close-btn');
 const overlay = document.querySelector('.overlay');
 
 // Header styles on scroll
+
 window.addEventListener('scroll', () => {
-    if(this.scrollY > 10) {
-        header.classList.add('scrolling');
-    }   
-    else {
-        header.classList.remove('scrolling');
-    }
+    this.scrollY > 10 ? header.classList.add('scrolling') : header.classList.remove('scrolling');
 });
 
 // Mobile navigation toggle
-menuOpenBtn.addEventListener('click', () => {
-    mobileNavigation.classList.add('opened');
-    document.body.classList.add('no-scrolling');
-    overlay.classList.add('opened');
-    mobileNavigation.setAttribute('aria-expanded', 'true');
-});
+
+menuOpenBtn.addEventListener('click', openMenu);
+
 menuCloseBtn.addEventListener('click', () => {
     if(mobileNavigation.classList.contains('opened')) {
-        mobileNavigation.classList.remove('opened');
-        document.body.classList.remove('no-scrolling');
-        overlay.classList.remove('opened');
-        mobileNavigation.setAttribute('aria-expanded', 'false');
+        closeMenu();
     }
 });
 document.body.addEventListener('mouseup', (e) => {
     if(e.target != mobileNavigation && !mobileNavigation.contains(e.target) && e.target != menuCloseBtn) {
-        mobileNavigation.classList.remove('opened');
-        document.body.classList.remove('no-scrolling');
-        overlay.classList.remove('opened'); 
-        mobileNavigation.setAttribute('aria-expanded', 'false');
+       closeMenu();
     }
 });
 
+function openMenu() {
+    mobileNavigation.classList.add('opened');
+    document.body.classList.add('no-scrolling');
+    overlay.classList.add('opened');
+    mobileNavigation.setAttribute('aria-expanded', 'true');
+}
+function closeMenu() {
+    mobileNavigation.classList.remove('opened');
+    document.body.classList.remove('no-scrolling');
+    overlay.classList.remove('opened');
+    mobileNavigation.setAttribute('aria-expanded', 'false');
+}
+
 // MobileNavigation innerMenu
 const dropdownBtns = document.querySelectorAll('.mobile-navigation .dropdown-btn');
-dropdownBtns.forEach((btn) => {
+dropdownBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         btn.parentElement.classList.add('active');
     });
 });
 const removeInnerMenu = document.querySelectorAll('.remove-inner-menu');
-removeInnerMenu.forEach((btn) => {
+removeInnerMenu.forEach(btn => {
     btn.addEventListener('click', () => {
         btn.closest('.has-children').classList.remove('active');
     });
@@ -57,6 +57,7 @@ const days = document.querySelector('.days');
 const hours = document.querySelector('.hours');
 const minutes = document.querySelector('.minutes');
 const seconds = document.querySelector('.seconds');
+
 const countdown = () => {
     let countDate = new Date('December 10, 2023 00:00:00').getTime();
     let now = new Date().getTime();
