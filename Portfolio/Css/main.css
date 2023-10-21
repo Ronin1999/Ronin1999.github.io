@@ -52,7 +52,9 @@ body.no-sc {
   overflow: hidden;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -402,6 +404,12 @@ p, h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+.about .about-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .about-title {
@@ -1134,7 +1142,7 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 .loader-container {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background-color: var(--bg-color);
   z-index: 9999;

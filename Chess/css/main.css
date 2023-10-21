@@ -37,6 +37,10 @@ body {
   transition: all 300ms ease;
 }
 
+body.no-sc {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -810,7 +814,7 @@ body[data-theme=light] .newsletter form .form-group input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 99;
+  z-index: 9999;
   pointer-events: none;
 }
 
@@ -825,22 +829,6 @@ body[data-theme=light] .newsletter form .form-group input:focus {
   border-radius: 100%;
 }
 
-.fade {
-  animation: fade 1.5s forwards linear;
-}
-
-@keyframes fade {
-  25% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
 @keyframes spin {
   to {
     transform: rotate(360deg);

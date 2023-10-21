@@ -35,6 +35,9 @@ body {
     color: var(--light-color);
     transition: all 300ms ease;
 }
+body.no-sc {
+    overflow: hidden;
+}
 a {
     text-decoration: none;
 }
@@ -202,7 +205,6 @@ body[data-theme="light"] {
 }
 
 // Header and navigation
-
 .header.active {
     border-bottom: 1px solid rgba(255,255,255,.3);
     z-index: 999;
@@ -821,6 +823,7 @@ body[data-theme="light"] {
         }
     }
 }
+
 // Loader
 .loader-wrapper {
     position: fixed;
@@ -831,7 +834,7 @@ body[data-theme="light"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 99;
+    z-index: 9999;
     pointer-events: none;
 }
 .loader {
@@ -844,22 +847,7 @@ body[data-theme="light"] {
     border-left-style: solid;
     border-radius: 100%; 
 }
-.fade {
-    animation: fade 1.5s forwards linear;
-}
 
-@keyframes fade {
-    25% {
-        opacity: 1;
-    }
-    50% {
-        opacity: .5;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
 
 @keyframes spin {
     to {

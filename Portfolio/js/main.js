@@ -1,3 +1,4 @@
+// Variables
 const menuToggleBtn = document.querySelector('.menu-toggle-btn');
 const mobileMenu = document.querySelector('.mobile-menu');
 const overlay = document.querySelector('.overlay');
@@ -5,21 +6,31 @@ const bodyEl = document.body;
 const header = document.querySelector('#header');
 const counters = document.querySelectorAll('.counter');
 
-menuToggleBtn.addEventListener('click', ()=> {
+// Toggle MobileMenu
+menuToggleBtn.addEventListener('click', toggleMenu);
+
+function toggleMenu() {
     mobileMenu.classList.toggle('active');
     menuToggleBtn.classList.toggle('active');
     overlay.classList.toggle('active');
     bodyEl.classList.toggle('no-sc');
-});
+}
 
 overlay.addEventListener('click', ()=> {
     if(mobileMenu.classList.contains('active')){
-        mobileMenu.classList.remove('active');
-        menuToggleBtn.classList.remove('active');
-        overlay.classList.remove('active');
-        bodyEl.classList.remove('no-sc');
+        closeMenu();
     }
 });
+
+function closeMenu() {
+    mobileMenu.classList.remove('active');
+    menuToggleBtn.classList.remove('active');
+    overlay.classList.remove('active');
+    bodyEl.classList.remove('no-sc');
+}
+
+
+// Toggle Header Class on Scroll
 window.addEventListener('scroll', ()=> {
     if(this.scrollY >= 30) {
         header.classList.add('active');
@@ -28,8 +39,12 @@ window.addEventListener('scroll', ()=> {
         header.classList.remove('active');
     }
 })
+
+
+
+// CountUp
 function countUp() {
-    counters.forEach((counter) => {
+    counters.forEach(counter => {
     counter.innerText = '00';
 
     const updateCounter = () => {
@@ -97,7 +112,12 @@ const swiper = new Swiper('.swiper', {
   });
 
 
-  const loader = document.querySelector('.loader-container');
-  window.addEventListener('load', ()=> {
-    loader.classList.add('loaded');
-  })
+// Preloader
+const loader = document.querySelector('.loader-container');
+  window.addEventListener('DOMContentLoaded', ()=> {
+    bodyEl.classList.add('no-sc');
+    setTimeout(() => {
+        loader.remove();
+        bodyEl.classList.remove('no-sc');
+    }, 1500)
+})

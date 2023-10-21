@@ -100,10 +100,13 @@ const swiper = new Swiper('.swiper', {
 //   Loader
 const loader = document.querySelector('.loader-wrapper');
 
-function loadIn() {
-    loader.classList.add('fade');
-}
-window.addEventListener('load', loadIn);
+window.addEventListener('DOMContentLoaded', () => {
+    bodyEl.classList.add("no-sc");
+    setTimeout(() => {
+        loader.remove();
+        bodyEl.classList.remove('no-sc');
+    }, 2000)
+});
 
 
 // Hero Slider
