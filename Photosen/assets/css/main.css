@@ -265,7 +265,6 @@ ul[role=list] {
 .dropdown-btn.active ~ .dropdown-menu {
   pointer-events: all;
   overflow: auto visible;
-  max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
 }

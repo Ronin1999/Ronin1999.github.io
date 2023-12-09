@@ -103,8 +103,7 @@ body {
 }
 
 .visible {
-  -webkit-animation: visible 1s linear forwards;
-          animation: visible 1s linear forwards;
+  animation: visible 1s linear forwards;
 }
 
 .hero {
@@ -242,15 +241,7 @@ body {
   transform: translateX(0);
 }
 .navigation.active .social-links, .navigation.active .description, .navigation.active .nav-list, .navigation.active .headline {
-  -webkit-animation: fadeIn 1s ease 500ms forwards;
-          animation: fadeIn 1s ease 500ms forwards;
-}
-
-@-webkit-keyframes fadeIn {
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  animation: fadeIn 1s ease 500ms forwards;
 }
 
 @keyframes fadeIn {
@@ -341,7 +332,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
   color: rgba(255, 255, 255, 0.5);
@@ -370,8 +360,7 @@ body {
   flex-direction: column;
   gap: 1rem;
   padding: 0 4rem;
-  -webkit-animation: fade-up 1s linear forwards;
-          animation: fade-up 1s linear forwards;
+  animation: fade-up 1s linear forwards;
 }
 .hero-content .intro-text {
   font-size: 1.6rem;
@@ -394,17 +383,6 @@ body {
 .hero-content .btn-group--hero .btn-outline {
   padding: 2rem;
   font-weight: 500;
-}
-
-@-webkit-keyframes fade-up {
-  from {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 @keyframes fade-up {
@@ -685,8 +663,7 @@ body {
 }
 
 .gallery-image-container:hover .overlay {
-  -webkit-animation: fade-in 1s linear forwards;
-          animation: fade-in 1s linear forwards;
+  animation: fade-in 1s linear forwards;
 }
 .gallery-image-container:hover img {
   scale: 1.1;
@@ -699,13 +676,6 @@ body {
 }
 .gallery-image-container:hover .information {
   transform: translateY(0);
-}
-
-@-webkit-keyframes fade-in {
-  to {
-    pointer-events: all;
-    opacity: 1;
-  }
 }
 
 @keyframes fade-in {
@@ -941,11 +911,6 @@ body {
   font-size: 1.3rem;
   opacity: 0.3;
 }
-.newsletter .col-left form input:-ms-input-placeholder, .newsletter .col-left form textarea:-ms-input-placeholder {
-  color: var(--white);
-  font-size: 1.3rem;
-  opacity: 0.3;
-}
 .newsletter .col-left form input::placeholder,
 .newsletter .col-left form textarea::placeholder {
   color: var(--white);
@@ -1069,12 +1034,6 @@ body {
   opacity: 0.3;
   font-size: 1.4rem;
 }
-.footer .right-col form .input-container input:-ms-input-placeholder {
-  text-align: center;
-  color: var(--white);
-  opacity: 0.3;
-  font-size: 1.4rem;
-}
 .footer .right-col form .input-container input::placeholder {
   text-align: center;
   color: var(--white);
@@ -1114,13 +1073,6 @@ body {
   font-size: 1.5rem;
   text-transform: capitalize;
   color: var(--white);
-}
-
-@-webkit-keyframes visible {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 @keyframes visible {
@@ -1212,9 +1164,6 @@ body {
     text-align: left !important;
   }
   .footer form .input-container input::-moz-placeholder {
-    text-align: left !important;
-  }
-  .footer form .input-container input:-ms-input-placeholder {
     text-align: left !important;
   }
   .footer form .input-container input::placeholder {
